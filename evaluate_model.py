@@ -1,3 +1,5 @@
+# import necessary libraries
+
 import pandas as pd
 import numpy as np
 import sys
@@ -14,22 +16,17 @@ if len(sys.argv) != 2:
 
 dataset_folder_path = sys.argv[1]
 
-print(dataset_folder_path)
-
 if not os.path.exists(dataset_folder_path):
     print(f"Error: The specified folder '{dataset_folder_path}' does not exist.")
     sys.exit(1)
 
 files = os.listdir(dataset_folder_path)
 
-
 if not files:
     print(f"No files found in the folder '{dataset_folder_path}'.")
     sys.exit(1)
 
-
 csv_file = os.path.join(dataset_folder_path, files[0])
-
 
 try:
     test_df = pd.read_csv(csv_file)
