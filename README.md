@@ -106,8 +106,70 @@ Model architecture that used to train:
 </ul>
  
 
-## Execution Steps 
+## Evaluation Steps 
 
-11
+Here, is the step by step explanation to execute python script and evaluate trained model. Open ```CMD terminal``` and go to your desire folder using ```cd``` command. 
+
+**Step 01 :** Clone repository <br>
+<b>command:  </b>  ``` git clone https://github.com/Sajjad-Hossain-Talukder/Sustainable-Apparel-Classification.git  ```
+
+
+**Step 02 :** Install <b> virtualenv </b> <br>
+<b>command :  </b> ```pip install virtualenv```
+
+**Step 03 :** Create <b> virtualenv </b> <br>
+<b>command : </b> ```virtualenv venv```
+
+**Step 04 :** Activate <b> virtualenv </b> <br>
+<b>command : </b>  ```venv\Scripts\activate```
+
+**Step 05 :**  <b>Install dependencies</b> <br>
+<b>command :  </b> ``` pip install -r requirements.txt ```
+
+**Step 06 :**  Run <b> evaluate_model.py </b> script <br>
+<b> command : </b>  ```py evaluate_model.py path_to_test_dataset``` <br>
+<b> Sample : </b> ```py evaluate_model.py E:\InteractiveCares\Sustainable-Apparel-Classification\TestDataSet``` <br>
+<b> Note : </b> Here, test dataset is incorporated in ```TestDataSet``` folder. 
+
+
+**Step 07 :** Check  <b> output.txt </b> <br>
+After successful execution, it prints message on '''CMD''' of '''output.txt''' creation. Go to the directory and Open 'output.txt' for evaluation report. 
+
+**Step 08 :** Deactivate <b> virtualenv </b> <br>
+<b>command : </b>  ```deactivate```
+
+
+
+
+## Evaluation Metrics
+
+Accuracy of testing , Confusion Matrix and Classification Report used for evaluating our trained model. 
+
+### Confusion Matrix 
+A confusion matrix is a table that summarizes a classification model's performance by quantifying true positives, true negatives, false positives, and false negatives. It serves as the foundation for various evaluation metrics, including accuracy, precision, recall, specificity, F1-score, and AUC-ROC, allowing you to assess the model's classification performance.
+
+### classification report
+The classification report is a summary of the performance of a classification model. It provides various metrics that help assess the quality of the model's predictions, especially in multiclass classification problems. The classification report typically includes the following metrics for each class:
+
+**Precision:** Precision measures the accuracy of the positive predictions made by the model. It is the ratio of true positive (TP) predictions to the total positive predictions made by the model. High precision indicates a low false positive rate.
+
+**Recall (Sensitivity):** Recall measures the model's ability to correctly identify positive instances. It is the ratio of true positive (TP) predictions to the total actual positive instances. High recall indicates a low false negative rate.
+
+**F1-Score:** The F1-score is the harmonic mean of precision and recall. It provides a balanced measure of a model's performance. It is useful when you want to find an optimal balance between precision and recall.
+
+**Support:** Support is the number of actual occurrences of each class in the dataset. It helps you understand the distribution of the classes in the dataset.
+
+The classification report summarizes these metrics for each class and often includes the overall performance metrics for the model. The overall performance can be reported using different averaging methods:
+
+**Micro-Averaging:** Calculates the metrics globally by counting the total true positives, false negatives, and false positives. It treats all instances as a single dataset.
+
+**Macro-Averaging:** Calculates the metrics for each class individually and then takes the unweighted mean of the metrics across all classes. It gives equal importance to each class.
+
+**Weighted Macro-Averaging:** Similar to macro-averaging but weights the mean by the number of instances in each class. It gives more importance to larger classes.
+
+The classification report is a valuable tool for evaluating a classification model's performance, particularly in scenarios with multiple classes, as it provides a detailed breakdown of the model's behavior for each class. It helps in understanding where the model excels and where it may need improvement.
+
+
+
 
 
