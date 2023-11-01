@@ -91,17 +91,20 @@ Model architecture that used to train:
 |Conv2D(16 filters, 3x3) |(26, 26, 16)|
 |MaxPooling2D (2x2)		|(13, 13, 16)|
 |Dropout (0.5)	|	(13, 13, 16)|
-|Flatten||
+|Flatten|2704|
 |Dense (128, ReLU)| 128|
 |Dropout (0.5)	|128|
 |Dense (10, Softmax)| 10 |
 
-
-
-
 ## Model training Parameters
-
-11
+<ul>
+  <li> Epochs=500 </li>
+  <li> Batch Size=512 </li>
+  <li> Loss Function = sparse_categorical_crossentropy </li>
+  <li> Optimizer= Adam </li>
+  <li> Metrics= Accuracy </li>
+</ul>
+ 
 
 ## Execution Steps 
 
